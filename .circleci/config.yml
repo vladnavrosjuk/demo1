@@ -26,7 +26,8 @@ jobs:
       - run:
           command: |
             sudo apt update
-            sudo apt-get install libnss 
+            apt search libnss3
+            sudo apt install -y libnss3 
             mvn test
           name: Test
           no_output_timeout: 59m

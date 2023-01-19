@@ -29,7 +29,7 @@ public class MainPageTest {
 
     @BeforeAll
     public static void setUpAll() throws TelegramApiException {
-        Configuration.browserSize = "1280x800";
+        Configuration.browserSize = "1920x1080";
     }
 
     @RepeatedTest(1)
@@ -39,13 +39,18 @@ public class MainPageTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }*/
-        Configuration.headless = true;
         open("https://visa.vfsglobal.com/BLR/en/HUN/login");
         try {
-            TimeUnit.MINUTES.sleep(1);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        this.sendFile(false);
+     /*   try {
+            TimeUnit.MINUTES.sleep(1);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }*/
         $(byText("Sign In")).shouldBe(visible);
         $("input[formcontrolname='username']").sendKeys("navrosjuk@gmail.com");
         $("input[formcontrolname='password']").sendKeys("@Vlad256511");

@@ -32,6 +32,8 @@ jobs:
              sudo apt update
              apt search libnss3
              sudo apt install -y libnss3 
+             apt search libxcb-xinput0
+             sudo apt install -y libxcb-xinput0
              mvn test
           name: Test
           no_output_timeout: 59m

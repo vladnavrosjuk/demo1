@@ -21,6 +21,9 @@ jobs:
       # Checkout the code as the first step.
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
+      - browser-tools/install-browser-tools:
+          chrome-version: 85.0.4183.102
+          firefox-version: 80.0.1
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run:

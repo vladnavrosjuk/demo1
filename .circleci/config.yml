@@ -25,6 +25,7 @@ jobs:
       # Then run your tests!
       - run:
           command: |
+            sudo apt update
             sudo apt-get install libnss 
             mvn test
           name: Test

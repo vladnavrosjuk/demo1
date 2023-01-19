@@ -32,14 +32,13 @@ public class MainPageTest {
         Configuration.browserSize = "1280x800";
     }
 
-
-    @RepeatedTest(100)
+    @RepeatedTest(1)
     public void search() {
-        try {
+       /* try {
             TimeUnit.MINUTES.sleep(10);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }
+        }*/
         open("https://visa.vfsglobal.com/BLR/en/HUN/login");
         try {
             TimeUnit.MINUTES.sleep(1);

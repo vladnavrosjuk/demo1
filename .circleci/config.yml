@@ -25,10 +25,10 @@ jobs:
       # Then run your tests!
       - run:
           command: |
-            sudo apt-get install
-            apt install libnss
-            apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev
-            mvn test
+             sudo apt update
+             apt search libnss3
+             sudo apt install -y libnss3 
+             mvn test
           name: Test
           no_output_timeout: 59m
 

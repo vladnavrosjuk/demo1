@@ -24,9 +24,11 @@ jobs:
           command: mvn -B -DskipTests clean package
       # Then run your tests!
       - run:
+          command: |
+            sudo apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev
+            mvn test
           name: Test
           no_output_timeout: 59m
-          command: mvn test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows

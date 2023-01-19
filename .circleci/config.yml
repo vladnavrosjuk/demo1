@@ -19,8 +19,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       # Checkout the code as the first step.
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      - browser-tools/install-geckodriver
       - browser-tools/install-browser-tools:
           chrome-version: 85.0.4183.102
           firefox-version: 80.0.1

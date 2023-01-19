@@ -39,6 +39,7 @@ public class MainPageTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }*/
+        Configuration.browser= "firefox";
         open("https://visa.vfsglobal.com/BLR/en/HUN/login");
         try {
             Thread.sleep(5000);

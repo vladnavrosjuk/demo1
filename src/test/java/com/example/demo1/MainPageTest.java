@@ -39,6 +39,7 @@ public class MainPageTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }*/
+        Configuration.headless = true;
         open("https://visa.vfsglobal.com/BLR/en/HUN/login");
         try {
             TimeUnit.MINUTES.sleep(1);

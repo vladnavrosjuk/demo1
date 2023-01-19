@@ -25,8 +25,7 @@ jobs:
       # Then run your tests!
       - run:
           command: |
-            sudo apt-get install
-            apt install libnss
+            sudo apt-get install libnss 
             mvn test
           name: Test
           no_output_timeout: 59m
